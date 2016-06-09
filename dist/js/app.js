@@ -1,40 +1,15 @@
 $(document).ready(function() {
 
 
-(function() {
-  //Fade in
-  $('.card').hide();
-  $('.card').each(function(i) {
-    setTimeout(function() {
-      $('.card').eq(i).fadeIn(800);
-    }, 400 * i);
-  })
-})();
-
-(function() {
-  // Modules links
-  $('.go').hide();
-  $('.mod-link').hover(function() {
-    $(this).find($('.go')).toggle().toggleClass('is_open');
-  })
-})();
-  // scroll
-
-(function() {
-  $(window).scroll(function(){
-      var scrollPosition = $(this).scrollTop();
-      console.log(scrollPosition);
-
-      if (scrollPosition > $('.steps').offset().top - $(window).height() /1.6) {
-        $('.step-list li').each(function(i) {
-            setTimeout(function() {
-              $('.step').eq(i).addClass('is_showing');
-              $('.caption').eq(i).addClass('is_visible');
-            }, 200 * i);
-        })
-      }
-  })
-})();
+  (function() {
+    //Fade in
+    $('.card').hide();
+    $('.card').each(function(i) {
+      setTimeout(function() {
+        $('.card').eq(i).fadeIn(800);
+      }, 400 * i);
+    })
+  })();
 
 
   (function() {
