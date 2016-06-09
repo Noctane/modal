@@ -1,0 +1,82 @@
+h3
+  text-align: center
+  text-transform: uppercase
+  font-size: 0.9rem
+  letter-spacing: -1px
+
+.card
+  +span(4)
+  margin-left: span(4)
+  +border-radius(3px)
+  margin-bottom: 2em
+
+  .card-content
+    background: #fff
+    box-shadow: 0 0 10px rgba(0,0,0,0.2)
+    +border-radius(3px)
+
+  .card-img
+    background: #000
+    height: 200px
+    +border-top-radius(3px)
+    overflow: hidden
+
+    a
+      display: block
+      position: relative
+      height: 200px
+      &:hover img
+        opacity: 0.5
+        transition: opacity ease-in-out 0.2s
+
+      i
+        position: absolute
+        text-align: center
+        font-size: 4em
+        color: $white
+        top: 35%
+        left: 40%
+
+      .is_open
+        animation-name: bounceIn
+        animation-duration: 500ms
+        animation-fill-mode: both
+
+
+    img
+      +img-responsive
+      opacity: 1
+      transition: opacity ease-in-out 0.2s
+
+  .card-head
+    position: relative
+    .card-categ
+      text-transform: uppercase
+      position: absolute
+      font-size: 0.7em
+      padding: 0 6px
+      right: 0
+      bottom: -10px
+
+      &.orange
+        +card-categ($orange, $white)
+
+      &.teal
+        +card-categ($teal, $white)
+
+  .card-caption
+    padding: 10px
+    text-align: center
+
+    h4,
+    p
+      text-align: center
+
+    hr
+      margin: 0.5rem auto 0.75rem
+
+    a
+      text-decoration: none
+      text-transform: uppercase
+      font-size: 0.8em
+      margin: 1.8em auto 1em

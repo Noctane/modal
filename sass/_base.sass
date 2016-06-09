@@ -1,0 +1,32 @@
+body
+  background: url(../img/bg.jpg) no-repeat
+  background-size: cover
+  font-family: $font-body
+  font-size: $basic-font-size
+  line-height: $basic-line-height
+  color: $grey
+
+h1, h2, h3, h4, h5, h6
+  font-family: $font-title
+  color: $grey-dark
+
+hr
+  width: 10em
+  border: none
+  border-top: solid 1px $grey-medium
+  margin: 10px auto 30px
+
+* + p
+  margin: 0.878787em 0
+
+h4 + p
+  margin-top: 0.5rem
+
+h4
+  margin-bottom: 0.5rem
+
+a
+  color: $blue
+  text-decoration: none
+  &:hover
+    color: lighten($blue, 10%)

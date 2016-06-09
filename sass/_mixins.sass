@@ -1,0 +1,52 @@
+=clearfix()
+  &:before,
+  &:after
+    content: " "
+    display: table
+
+  &:after
+    clear: both
+
+
+//button-variant
+=btn-variant($color, $background)
+  color: $color
+  background: $background
+  transition: background ease-in-out 0.1s
+  &:hover,
+  &:focus,
+  &:active,
+  &.active
+    color: $color
+    background: lighten($background, 10%)
+    transition: background ease-in-out 0.1s
+
+//border-radius
+=border-radius($radius)
+  border-radius: $radius
+
+=border-top-radius($radius)
+  border-top-right-radius: $radius
+  border-top-left-radius: $radius
+
+=border-bottom-radius($radius)
+  border-bottom-right-radius: $radius
+  border-bottom-left-radius: $radius
+
+=border-left-radius($radius)
+  border-top-left-radius: $radius
+  border-bottom-left-radius: $radius
+
+=border-right-radius($radius)
+  border-top-right-radius: $radius
+  border-bottom-right-radius: $radius
+
+//Categ
+=card-categ($bg-color, $color)
+  background: $bg-color
+  color: $color
+
+=img-responsive()
+  display: block
+  max-width: 100%
+  height: auto

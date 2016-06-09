@@ -1,0 +1,89 @@
+.j_modal
+  display: none
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  outline: 0
+  background: rgba(0,0,0,0.4)
+  overflow: auto
+  z-index: 1
+  &.is_showing
+    display: inline-block
+    animation-name: bounceIn
+    animation-duration: 500ms
+    animation-fill-mode: both
+
+.j_modal-content
+  position: relative
+  width: 600px
+  margin: 5em auto
+  background: #fff
+  border-radius: 5px
+  box-shadow: 0 0 50px rgba(0,0,0,0.2)
+  z-index: 1
+
+  .j_modal-close
+    position: absolute
+    top: -15px
+    right: -15px
+    width: 30px
+    height: 30px
+    background: rgba(0,0,0,0.4)
+    border-radius: 30px
+    font-size: 2em
+    color: rgba(255, 255, 255, 0.5)
+    text-align: center
+    z-index: 3
+    &:hover
+      cursor: pointer
+      color: rgba(255, 255, 255, 1)
+
+
+  .j_modal-head
+    position: relative
+    .j_modal-categ
+      text-transform: uppercase
+      position: absolute
+      font-size: 0.7em
+      padding: 0 6px
+      right: 0
+      bottom: -10px
+      z-index: 3
+      &.orange
+        +card-categ($orange, $white)
+
+      &.teal
+        +card-categ($teal, $white)
+
+
+  .j_modal-img
+    height: 250px
+    border-radius: 5px 5px 0 0
+    overflow: hidden
+
+  .j_modal-desc
+    padding: 0 3em 1.5em
+    p
+      text-align: left
+
+  .j_modal-list
+    list-style: none
+    padding: 0
+    margin: 0
+
+    li
+      margin: 0 0 1em
+
+    h5
+      margin: 0
+
+    p
+      margin: 0
+      line-height: 1.25
+
+  .j_modal-action
+    a.btn
+      color: #fff
+      font-weight: normal

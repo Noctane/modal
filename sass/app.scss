@@ -1,0 +1,38 @@
+@import "../bower_components/susy/sass/susy";
+@import "lib/normalize";
+@import "lib/fontawesome/scss/font-awesome";
+@import "fonts";
+
+$susy: (
+  columns: 12,
+  container: 80em,
+  gutters: 1/2,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+  global-box-sizing: border-box,
+);
+
+$juris: (
+  columns: 12,
+  container: 50em,
+  gutters: 1/2,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+  global-box-sizing: border-box,
+);
+
+@include layout($susy);
+
+@include border-box-sizing;
+
+
+@import "mixins";
+@import "variables";
+@import "animations";
+@import "base";
+@import "layout";
+@import "cards";
+@import "modal";
+@import "buttons";

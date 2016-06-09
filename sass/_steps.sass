@@ -1,0 +1,67 @@
+.steps
+  height: 10px
+  background: $grey-light
+  position: relative
+  margin: 120px auto 250px
+  +clearfix
+
+ul.step-list
+  margin: 0
+  padding: 0
+  list-style-type: none
+  position: absolute
+  bottom: -15px
+
+  li
+    display: inline-block
+    padding: 0 8em
+    position: relative
+    span.step
+      display: none
+      background: $white
+      padding: 8px 16px
+      border: solid 2px lighten($blue, 60%)
+      border-radius: 50%
+      font-weight: bold
+      cursor: pointer
+      transition: border ease-in-out 0.2s
+      &:hover
+        border-color: $blue-cncgp
+        transition: border ease-in-out 0.2s
+      &.is_showing
+        display: inline-block
+        animation-name: bounceIn
+        animation-duration: 500ms
+        animation-fill-mode: both
+
+    .caption
+      display: none
+      margin: 15px 10px
+      padding-left: 40px
+      border-top: solid 1px $grey-light
+      position: absolute
+      left: 0
+      &::before
+        display: block
+        content: " "
+        width: 1px
+        height: 1px
+        background: #fff
+        border: solid 5px #fff
+        border-bottom-color: $grey-light
+        position: absolute
+        top: -10px
+        left: 135px
+
+      i
+        color: $blue-cncgp
+        font-size: 2em
+        position: absolute
+        top: 20px
+        left: 0
+
+    .is_visible
+        display: block
+        animation-name: bounceInUp
+        animation-duration: 500ms
+        animation-fill-mode: both
